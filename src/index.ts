@@ -1,14 +1,20 @@
-const drink = "chai"
+const subscriber: number | string = "1m"
 
-const drink2: string = "chai"
+const statusCode: "sucess"| "error" | "failure" = "sucess"
 
-const cups = 2;
-
-
-const cups2: number = 2
-
-const isChai = true;
+const orders = ["12", "20", "28", "42"];
 
 
-const isChai2: boolean = false;
+let currentOrder:string | undefined;
 
+
+for (let order of orders) {
+    if (order === "28"){
+        currentOrder = order
+        break;
+    }
+    currentOrder ="11"
+}
+
+
+console.log(currentOrder)
