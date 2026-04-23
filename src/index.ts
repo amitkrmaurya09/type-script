@@ -1,20 +1,42 @@
-const subscriber: number | string = "1m"
-
-const statusCode: "sucess"| "error" | "failure" = "sucess"
-
-const orders = ["12", "20", "28", "42"];
-
-
-let currentOrder:string | undefined;
-
-
-for (let order of orders) {
-    if (order === "28"){
-        currentOrder = order
-        break;
+function getchai(kind: string | number) {
+    if( typeof kind === "string"){
+        return `making ${kind} chai....`;
     }
-    currentOrder ="11"
+
+    return `chai order: ${kind}`;
+}
+
+function serveChai(msg?: string) {
+    if(msg) {
+        return `serving ${msg}`;
+    }
+    return `serving default masala chai`
 }
 
 
-console.log(currentOrder)
+function orderChai(size: "small"| "medium" | "larger" | number) {
+    if(size === "small"){
+        return `small cutting chai....`
+    }
+    if (size === "medium" || size === "larger"){
+        return ` make extra chai..`
+    }
+
+    return `chai order ${size}`
+}
+
+
+class Kulhadchai{
+    serve(){
+        return `serving cutting chai`
+    }
+}
+
+
+class cutting{
+    serve(){
+        return `serving cutting chai`
+    }
+}
+
+

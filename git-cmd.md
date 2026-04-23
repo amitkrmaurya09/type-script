@@ -1,4 +1,4 @@
-# most git command i used in this project
+# The Git commands I used most in this project
 
 ## to check all git commit 
 git log --oneline 
